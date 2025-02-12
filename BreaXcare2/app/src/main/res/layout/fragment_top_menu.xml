@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="10dp"
+    tools:context=".views.TopMenuFragment">
+
+    <!-- First Row -->
+    <LinearLayout
+        android:id="@+id/firstRow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="2dp">
+
+        <ImageView
+            android:id="@+id/menuItem1"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="50dp"
+            android:contentDescription="Item 1"
+            android:src="@drawable/breaxcarelogo"
+            android:layout_gravity="center" />
+
+        <!-- Overlay Buttons -->
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_nonPremium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Non-Premium"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:padding="0dp"
+                android:textColor="#98690c"
+                app:backgroundTint="@null"
+                app:strokeWidth="2dp"
+                app:strokeColor="#98690c"
+                android:background="@drawable/rounded_nonpremium_background" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_premium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Premium"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:padding="0dp"
+                android:textColor="@color/black"
+                app:backgroundTint="#D5A902"
+                android:background="@drawable/rounded_nonpremium_background"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/black"/>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/ic_settings"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_settings"
+            android:contentDescription="Item 3"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="0dp"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:id="@+id/ic_profile"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_profilepic"
+            android:contentDescription="Item 4"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <!-- Second Row -->
+    <LinearLayout
+        android:id="@+id/secondRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_below="@id/firstRow"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="12dp">
+
+        <TextView
+            android:id="@+id/txt_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good Morning"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guest!"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+</RelativeLayout>

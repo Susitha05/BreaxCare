@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.DashboardActivity">
+
+    <!-- Main LinearLayout to contain all elements vertically -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:scrollbars="vertical">
+
+        <!-- Top Layout for Logo -->
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/menuItem1"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:src="@drawable/breaxcarelogo"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Back Button Section -->
+        <LinearLayout
+            android:id="@+id/top1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_back"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_back"
+                android:layout_marginLeft="-30dp"
+                android:text="Back"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <!-- Header Text Section -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Your Plan &amp; Payment Method"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Card for Plan Selection -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mainCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="#EFEFEF"
+            app:cardCornerRadius="12dp">
+
+            <!-- Plan Selection Spinner -->
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@drawable/rounded_edit_text_background">
+
+                <Spinner
+                    android:id="@+id/planSelectSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card for Card Type Selection -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/subCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#EFEFEF"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Card Type Text -->
+                <TextView
+                    android:id="@+id/text_notifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose Card Type"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- RadioGroup for Card Types -->
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Radio Buttons for Card Types -->
+                    <RadioButton
+                        android:id="@+id/radio_visa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Visa"
+                        android:textSize="16sp"
+                        android:drawableLeft="@drawable/ic_visa"
+                        android:buttonTint="@color/primaryColor"
+                        android:paddingStart="8dp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_mastercard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mastercard"
+                        android:textSize="16sp"
+                        android:drawableLeft="@drawable/ic_mastercard"
+                        android:buttonTint="@color/primaryColor"
+                        android:paddingStart="8dp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_american_express"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="American Express"
+                        android:textSize="16sp"
+                        android:drawableLeft="@drawable/ic_american_express"
+                        android:buttonTint="@color/primaryColor"
+                        android:paddingStart="8dp"
+                        android:layout_marginBottom="8dp"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card for Card Holder Name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_edit_text_background"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <EditText
+                android:id="@+id/ccName"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Card Holder Name"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="#808080"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_edit_text_background"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <EditText
+                android:id="@+id/cardNo"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Card Number"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="#808080"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:layout_marginTop="20dp">
+
+            <!-- First Name Field -->
+            <EditText
+                android:id="@+id/expireDate"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:hint="MM/YY"
+                android:textSize="17sp"
+                android:textColorHint="#808080"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:layout_marginTop="2dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/rounded_edit_text_background" />
+            <!-- Last Name Field -->
+            <EditText
+                android:id="@+id/cvv"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:hint="CVV"
+                android:textSize="17sp"
+                android:textColorHint="#808080"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="16dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/rounded_edit_text_background" />
+
+        </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_pay"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/primaryColor"
+                android:text="Pay Now"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.DashboardActivity">
+
+    <FrameLayout
+        android:id="@+id/topMenuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_back"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_back"
+        app:layout_constraintTop_toBottomOf="@id/topMenuContainer"
+        android:text="Back"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainCard"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:cardCornerRadius="12dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#FFC9CC"
+        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/imagecard"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:background="#FFC9CC"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:padding="0dp"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/imageframe"
+                android:layout_width="367dp"
+                android:layout_marginLeft="6dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/breast_"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/quecard"
+            android:layout_width="360dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="170pt"
+            app:cardCornerRadius="20dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Have you noticed any lumps or changes in your breast or underarm area?"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textAlignment="viewStart"
+                android:layout_marginTop="10pt"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/rediogroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="90dp"
+                        android:text="Yes"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30pt"
+                        android:text="NO"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </RadioGroup>
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="550dp"
+            android:backgroundTint="#EFEFEF"
+            android:drawableRight="@drawable/ic_next"
+            android:text="Next"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintTop_toBottomOf="@id/quecard"/>
+
+    </androidx.cardview.widget.CardView>
+    <FrameLayout
+        android:id="@+id/bottomMenuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

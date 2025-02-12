@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.events.PostSurgeryActivity">
+
+    <FrameLayout
+        android:id="@+id/topMenuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_back"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_back"
+        android:text="Back"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post Surgery Exercises"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.102"
+        app:layout_editor_absoluteX="80dp"
+        app:layout_editor_absoluteY="35dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="390dp"
+        android:layout_height="590dp"
+        app:cardBackgroundColor="#FFC9CC"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.794"
+        app:layout_editor_absoluteY="100dp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_icon"/>
+
+        <TextView
+            android:id="@+id/extext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="420dp"
+            android:text="Warm up Exercises "
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="450dp"
+            android:text="Time 30s"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/primaryColor"
+            android:textSize="42dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="520dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/ic_back"/>
+
+            <Button
+                android:id="@+id/star"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="35dp"
+                android:backgroundTint="@color/primaryColor"
+                android:text="Start"
+                android:textSize="16sp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/ic_next"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

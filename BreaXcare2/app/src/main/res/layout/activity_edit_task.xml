@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.DashboardActivity">
+
+    <FrameLayout
+        android:id="@+id/topMenuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_back"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_back"
+        android:text="Back"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <!-- Card View Below Top Menu -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainCard"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#EFEFEF"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="New Task / Event"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_edit_text_background"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <Spinner
+                    android:id="@+id/TitleSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dp"
+                    android:spinnerMode="dropdown"
+                    android:layout_alignParentStart="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_edit_text_background"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:textSize="17sp"
+                    android:textColorHint="#808080"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="2dp"
+                    android:paddingLeft="10dp"
+                    android:clickable="true"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:id="@+id/dateIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_calender"
+                    android:contentDescription="Password Icon"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="4dp"
+                    app:tint="#FF4081" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_edit_text_background"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/time"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:textSize="17sp"
+                    android:textColorHint="#808080"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="2dp"
+                    android:paddingLeft="10dp"
+                    android:clickable="true"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:id="@+id/timeIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_time"
+                    android:contentDescription="Password Icon"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="4dp"
+                    app:tint="#FF4081" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_edit_text_background"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp">
+
+                <Spinner
+                    android:id="@+id/TaskTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dp"
+                    android:spinnerMode="dropdown"
+                    android:layout_alignParentStart="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_edit_text_background"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Description"
+                    android:textSize="14sp"
+                    android:textColorHint="#808080"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="2dp"
+                    android:paddingLeft="10dp"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    android:background="@android:color/transparent"
+                    android:inputType="textMultiLine"
+                    android:minHeight="60dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#808080"
+                    android:text="Cancel"
+                    android:textSize="12sp"
+                    android:layout_marginRight="50dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/green"
+                    android:text="Update"
+                    android:textSize="12sp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/bottomMenuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

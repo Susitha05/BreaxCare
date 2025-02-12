@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="10dp"
+    tools:context=".views.BottomMenuFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_menu_background"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/Item1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="34dp"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/menuItem1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_menu_home"
+                android:contentDescription="Item 1"/>
+
+            <TextView
+                android:id="@+id/menutxt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Item2"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="34dp"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/menuItem2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_menu_events"
+                android:contentDescription="Item 2"/>
+            <TextView
+                android:id="@+id/menutxt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Events"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Item3"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="34dp"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/menuItem3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_menu_ai"
+                android:contentDescription="Item 3"/>
+            <TextView
+                android:id="@+id/menutxt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI Assist"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Item4"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/menuItem4"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_menu_account"
+                android:contentDescription="Item 4"/>
+            <TextView
+                android:id="@+id/menutxt4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

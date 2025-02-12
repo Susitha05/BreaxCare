@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141414"
+    tools:context=".views.Premium.PremiumMemberActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_back"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_close"
+        tools:layout_editor_absoluteX="339dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <LinearLayout
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:id="@+id/ic_settings"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:src="@drawable/breaxcarewhite"
+            android:contentDescription="Item 3"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/Header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Premium Member"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#D5A902" />
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mainCard"
+        android:layout_width="350dp"
+        android:layout_height="600dp"
+        app:cardCornerRadius="12dp"
+        style="@style/nonPremiumCard"
+        app:layout_constraintTop_toBottomOf="@id/Header2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/subCard"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="16dp"
+            android:backgroundTint="#808080"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Header2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_profileimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_profilepic"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="25dp">
+
+                    <TextView
+                        android:id="@+id/tv_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User Name"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="user@example.com"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/tv_billingDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="sans-serif" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/mainCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="200dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_updatepayment"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:text="Update Payment Card"
+                android:textSize="15sp"
+                android:textColor="#D5A902"
+                app:strokeColor="#D5A902"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="250dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_subscription"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:text="Manage Subscription"
+                android:textSize="15sp"
+                android:textColor="#D5A902"
+                app:strokeColor="#D5A902"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="300dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cards"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:text="Saved Cards"
+                android:textSize="15sp"
+                android:textColor="#D5A902"
+                app:strokeColor="#D5A902"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="350dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_billing"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:text="Billing History"
+                android:textSize="15sp"
+                android:textColor="#D5A902"
+                app:strokeColor="#D5A902"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="400dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_redeem"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:text="Redeem"
+                android:textSize="15sp"
+                android:textColor="#D5A902"
+                app:strokeColor="#D5A902"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

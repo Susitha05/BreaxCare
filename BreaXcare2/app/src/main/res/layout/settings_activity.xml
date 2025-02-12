@@ -1,0 +1,264 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="8dp">
+
+    <!-- Header Layout -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="40dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_back"
+            android:text="Back"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="Settings"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Select Language Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language: "
+            android:textSize="16sp"
+            android:layout_marginLeft="100dp"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English (Default)"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- First Card View -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#EFEFEF">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- First Toggle -->
+            <TextView
+                android:id="@+id/text_notifications"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Allow System Notifications"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/toggle_notifications"
+                android:layout_marginEnd="16dp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/toggle_notifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/CustomSwitchTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_notifications"
+                app:layout_constraintBottom_toBottomOf="@id/text_notifications" />
+
+            <!-- Second Toggle -->
+            <TextView
+                android:id="@+id/text_biometrics"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Use Your Biometrics To Unlock"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_notifications"
+                app:layout_constraintEnd_toStartOf="@id/toggle_biometrics"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Third Toggle -->
+            <TextView
+                android:id="@+id/text_daily_suggestions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Daily Suggestions"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_biometrics"
+                app:layout_constraintEnd_toStartOf="@id/toggle_daily_suggestions"
+                android:layout_marginEnd="16dp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/toggle_daily_suggestions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/CustomSwitchTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_daily_suggestions"
+                app:layout_constraintBottom_toBottomOf="@id/text_daily_suggestions" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/toggle_biometrics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/CustomSwitchTheme"
+                app:layout_constraintBottom_toBottomOf="@id/text_biometrics"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_biometrics" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <!-- Second Card View -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/childCard"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:cardCornerRadius="12dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#EFEFEF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_terms"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_btnstroke_background"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:padding="0dp"
+                android:text="Terms and Conditions"
+                android:textColor="#FF4081"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:strokeColor="#FF4081"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_privacy"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_btnstroke_background"
+                android:layout_marginBottom="10dp"
+                android:padding="0dp"
+                android:text="Privacy and Policy"
+                android:textColor="#FF4081"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:strokeColor="#FF4081"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_help"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_btnstroke_background"
+                android:layout_marginBottom="10dp"
+                android:padding="0dp"
+                android:text="Help &amp; Feedback"
+                android:textColor="#FF4081"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:strokeColor="#FF4081"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_about"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_btnstroke_background"
+                android:layout_marginBottom="10dp"
+                android:padding="0dp"
+                android:text="About Us"
+                android:textColor="#FF4081"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:strokeColor="#FF4081"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_delete_account"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_btnstroke_background"
+                android:layout_marginBottom="10dp"
+                android:padding="0dp"
+                android:text="Delete Your Account &amp; Data"
+                android:textColor="#FF4081"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:strokeColor="#FF4081"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_signout"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_btnstroke_background"
+                android:layout_marginBottom="10dp"
+                android:padding="0dp"
+                android:text="Sign Out"
+                android:textColor="#FF4081"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:strokeColor="#FF4081"
+                app:strokeWidth="2dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

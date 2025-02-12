@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141414"
+    tools:context=".views.Premium.SavedCardActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_back"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_close"
+        tools:layout_editor_absoluteX="339dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <LinearLayout
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:id="@+id/ic_settings"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:src="@drawable/breaxcarewhite"
+            android:contentDescription="Item 3"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/Header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Cards"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mainCard"
+        android:layout_width="350dp"
+        android:layout_height="600dp"
+        app:cardCornerRadius="12dp"
+        style="@style/nonPremiumCard"
+        app:layout_constraintTop_toBottomOf="@id/Header2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/subCard"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_margin="16dp"
+            android:backgroundTint="#484848"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Header2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add / Change Card"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupCardType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioVisa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_visa"
+                                android:contentDescription="Visa"
+                                app:buttonTint="@color/radio_button_tint"/>
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="20dp"/>
+
+                            <RadioButton
+                                android:id="@+id/radioMasterCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_mastercard"
+                                android:contentDescription="Mastercard"
+                                app:buttonTint="@color/radio_button_tint"/>
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="20dp"/>
+
+                            <RadioButton
+                                android:id="@+id/radioAmex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_american_express"
+                                android:contentDescription="American Express"
+                                app:buttonTint="@color/radio_button_tint"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+
+                    <EditText
+                        android:id="@+id/cardName"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_border"
+                        android:hint="Card Holder Name"
+                        android:inputType="text"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/cardNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_border"
+                        android:hint="Card Number"
+                        android:inputType="text"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/expireDate"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:hint="MM/YY"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+
+                        <EditText
+                            android:id="@+id/cvv"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:hint="CVV"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_CardUpdate"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="Save Card"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#484848"
+                        android:layout_marginTop="15dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_clear"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:text="Clear Selection"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#808080"
+            android:paddingTop="-10dp"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="90dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/subCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="320dp"
+            android:padding="10dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cardRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

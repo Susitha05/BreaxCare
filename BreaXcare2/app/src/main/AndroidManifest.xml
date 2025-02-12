@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BreaXcare"
+        tools:targetApi="31">
+        <activity
+            android:name=".views.MedicalHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Premium.RedeemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Premium.BillingHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Premium.ManageSubscriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Premium.UpdatePaymentCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Premium.SavedCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.events.BreastHealthTrendsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.events.DietaryRecommendationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.events.DailyTipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.checkuphandler.SymptomTrackingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.events.PostSurgeryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.events.ExerciseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.checkuphandler.AnswerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.checkuphandler.QuestionnaireActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.GeminiAIActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Premium.PremiumMemberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.NonPremiumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.usershandler.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".views.events.ConsultationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.events.FAQActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.events.YourTrendsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.taskmaneger.NotesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.taskmaneger.DeleteTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.taskmaneger.EditTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.taskmaneger.AddTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.taskmaneger.TreatmentPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.usershandler.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.events.AiAssistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.taskmaneger.EventsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.checkuphandler.CheckupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.StartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.SplashActivity"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
